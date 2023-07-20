@@ -11,4 +11,5 @@ class LoginPage(Base):
     def get_login_erro_text(self,msg = ''):
         return self.get_elemnt_text(LoginLocator.forgot_passwd_loc,msg)
 
-    
+    def get_logout_text(self,msg = ''):
+        return self.get_elemnt_text(LoginLocator.log_out_text_loc,msg)

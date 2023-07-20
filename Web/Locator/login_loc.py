@@ -8,4 +8,5 @@ class LoginLocator:
     login_btn_loc = (By.ID,'login-submit')
     forgot_passwd_loc = (By.CLASS_NAME,'lost_password')
     log_out_btn_loc = (By.CLASS_NAME,'logout')
+    log_out_text_loc = (By.XPATH,"//a[contains(text(),'Sign out')]")
     log_error_text_loc = (By.ID,'flash_error')

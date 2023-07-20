@@ -10,3 +10,14 @@ test_result_dir_path = read_config(config_file_path,'report','allure_results_dir
 test_report_dir_path = read_config(config_file_path,'report','test_report_dir_path')
 img_dir_path = read_config(config_file_path,'image','image_dir_path')
 
+if __name__ == '__main__':
+    arg = ['-s','-q','alluredir',test_result_dir_path]
+
+
+    pytest.main(arg)
+
+    cmd = 'allure generate %s -o %s -c '%(test_result_dir_path,test_report_dir_path)
+
+    os.system(cmd)
+
+
